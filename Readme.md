@@ -5,14 +5,38 @@
 
   Load a directory of grunt configurations.
 
+    grunt.initConfig(require('require-grunt-configs')(grunt));
+
 ## Installation
 
     % npm install require-grunt-configs
 
-## Usage
+## Configuration Example
 
-    var configuration = require('require-grunt-configs')(grunt);
-    grunt.config.init(configuration);
+`% tree grunt`
+
+    grunt
+    └── config
+        ├── common.js   # a convenient pattern for specifying common configuration values
+        └── connect.js  # configuration file names correspond to task names (i.e. `connect` task)
+
+`% cat grunt/config/common.js`
+
+    module.exports =
+      SOURCE_PATH: "src"
+
+`% cat grunt/config/connect.js`
+
+    module.exports =
+      server:
+        options:
+          hostname: "*"
+          port: 8800
+          base: "<%= grunt.config.get('common.SOURCE_PATH') %>"
+
+## Custom root directory
+
+    grunt.initConfig(require('require-grunt-configs')(grunt, '.grunt/conf'));
 
 ## Inspiration
 
@@ -23,3 +47,4 @@
   MIT
 
 [load-grunt-tasks]: https://github.com/sindresorhus/load-grunt-tasks
+
