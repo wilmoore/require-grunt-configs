@@ -1,7 +1,7 @@
 {
   "name": "require-grunt-configs",
   "description": "Load a directory of grunt configurations.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/wilmoore/require-grunt-configs",
   "author": {
     "name": "Wil Moore III",
@@ -27,8 +27,7 @@
   "scripts": {
     "test": "make test"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "peerDependencies": {
     "grunt": "~0.4.1"
   },
