@@ -35,6 +35,8 @@
     "gruntplugin",
     "grunt-config",
     "require",
+    "load",
+    "matchdep",
     "configuration"
   ]
 }
