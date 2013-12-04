@@ -6,9 +6,6 @@
 
   Load a directory of grunt configurations. Very similar to [load-grunt-tasks][] but for configuration. Check out the [before][] and [after][] to understand the benefit.
 
-    var configuration = require('require-grunt-configs')(grunt)
-    grunt.initConfig(configuration);
-
 ## Installation
 
     % npm install require-grunt-configs
