@@ -4,7 +4,7 @@
 [![Build Status](https://david-dm.org/wilmoore/require-grunt-configs.png)](https://david-dm.org/wilmoore/require-grunt-configs)
 [![NPM version](https://badge.fury.io/js/require-grunt-configs.png)](http://badge.fury.io/js/require-grunt-configs)
 
-  Load a directory of grunt configurations. Very similar to [load-grunt-tasks][] but for configuration.
+  Load a directory of grunt configurations. Very similar to [load-grunt-tasks][] but for configuration. Check out the [before][] and [after][] to understand the benefit.
 
     var configuration = require('require-grunt-configs')(grunt)
     grunt.initConfig(configuration);
@@ -13,18 +13,12 @@
 
     % npm install require-grunt-configs
 
-## Configuration Example
-
-  See the [before][] and [after][].
-
 ### gruntfile.js
 
     module.exports = function (grunt) {
 
-      // configuration
-      var configuration = require("require-grunt-configs")(grunt, "grunt/conf");
-
       // load all configuration files
+      var configuration = require("require-grunt-configs")(grunt, "grunt/conf");
       grunt.initConfig(configuration);
 
       // load custom tasks
@@ -71,5 +65,4 @@ Explore the directory [grunt/conf](https://github.com/wilmoore/require-grunt-con
 [load-grunt-tasks]: https://github.com/sindresorhus/load-grunt-tasks
 [before]:           https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.original.js
 [after]:            https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.js
-
 

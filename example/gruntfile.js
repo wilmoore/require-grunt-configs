@@ -1,9 +1,7 @@
 module.exports = function (grunt) {
 
-  // configuration
-  var configuration = require("require-grunt-configs")(grunt, "grunt/conf");
-
   // load all configuration files
+  var configuration = require("require-grunt-configs")(grunt, "grunt/conf");
   grunt.initConfig(configuration);
 
   // load custom tasks
