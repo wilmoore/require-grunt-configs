@@ -1,20 +1,17 @@
-# require-grunt-configs
-
-[![Build Status](https://travis-ci.org/wilmoore/require-grunt-configs.png?branch=master)](https://travis-ci.org/wilmoore/require-grunt-configs)
-[![Build Status](https://david-dm.org/wilmoore/require-grunt-configs.png)](https://david-dm.org/wilmoore/require-grunt-configs)
-[![NPM version](https://badge.fury.io/js/require-grunt-configs.png)](http://badge.fury.io/js/require-grunt-configs)
+# require-grunt-configs [![Build Status](https://travis-ci.org/wilmoore/require-grunt-configs.png?branch=master)](https://travis-ci.org/wilmoore/require-grunt-configs) [![Build Status](https://david-dm.org/wilmoore/require-grunt-configs.png)](https://david-dm.org/wilmoore/require-grunt-configs) [![NPM version](https://badge.fury.io/js/require-grunt-configs.png)](http://badge.fury.io/js/require-grunt-configs)
 
   Load a directory of grunt configurations. Very similar to [load-grunt-tasks][] but for configuration.
 
-    grunt.initConfig(require('require-grunt-configs')(grunt));
-
-  If your [`gruntfile` originally looked like this][before], with `require-grunt-configs`, [it can look like this][after].
+    var configuration = require('require-grunt-configs')(grunt)
+    grunt.initConfig(configuration);
 
 ## Installation
 
     % npm install require-grunt-configs
 
 ## Configuration Example
+
+  See the [before][] and [after][].
 
 ### gruntfile.js
 
