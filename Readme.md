@@ -8,7 +8,7 @@
 
 ## Installation
 
-    % npm install require-grunt-configs
+    % npm install require-grunt-configs --save-dev
 
 ### gruntfile.js
 
