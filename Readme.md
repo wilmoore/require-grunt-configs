@@ -8,38 +8,56 @@
 
     grunt.initConfig(require('require-grunt-configs')(grunt));
 
+  If your [`gruntfile` originally looked like this][before], with `require-grunt-configs`, [it can look like this][after].
+
 ## Installation
 
     % npm install require-grunt-configs
 
 ## Configuration Example
 
-`% tree grunt`
+### gruntfile.js
+
+    module.exports = function (grunt) {
+
+      // configuration
+      var configuration = require("require-grunt-configs")(grunt, "grunt/conf");
+
+      // load all configuration files
+      grunt.initConfig(configuration);
+
+      // load custom tasks
+      grunt.loadTasks("grunt/task");
+
+      // load installed npm tasks
+      require("load-grunt-tasks")(grunt);
+
+      // Register the default tasks
+      grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'sass', 'notify']);
+
+    };
+
+### configuration modules
 
     grunt
-    └── config
-        ├── common.js   # a convenient pattern for specifying common configuration values
-        └── connect.js  # configuration file names correspond to task names (i.e. `connect` task)
+    └── conf
+        ├── concat.js
+        └── jshint.js
+        └── notify.js
+        └── pkg.js
+        └── sass.js
+        └── uglify.js
+        └── watch.js
 
-`% cat grunt/config/common.js`
+Explore the directory [grunt/conf](https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf) to view the contents of the above files.
 
-    module.exports =
-      SOURCE_PATH: "src"
+## Root directory configuration examples
 
-`% cat grunt/config/connect.js`
+    # your configuration modules go under the "grunt" directory (default)
+    require('require-grunt-configs')(grunt)
 
-    module.exports =
-      server:
-        options:
-          hostname: "*"
-          port: 8800
-          base: "<%= grunt.config.get('common.SOURCE_PATH') %>"
-
-## Custom root directory
-
-    grunt.initConfig(require('require-grunt-configs')(grunt, '.grunt/conf'));
-
-## Rationale
+    # your configuration modules go under the ".grunt/conf" directory
+    require('require-grunt-configs')(grunt, '.grunt/conf')
 
 ## Inspiration
 
@@ -50,4 +68,7 @@
   MIT
 
 [load-grunt-tasks]: https://github.com/sindresorhus/load-grunt-tasks
+[before]:           https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.original.js
+[after]:            https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.js
+
 
