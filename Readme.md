@@ -6,6 +6,10 @@
 
   Load a directory of grunt configurations. Very similar to [load-grunt-tasks][] but for configuration. Check out the [before][] and [after][] to understand the benefit.
 
+## What's in it for you?
+
+Keep your main gruntfile clean while task configurations are tucked neatly away into individual files named after the task (i.e. `jshint.js`).
+
 ## Installation
 
     % npm install require-grunt-configs --save-dev
