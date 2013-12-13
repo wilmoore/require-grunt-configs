@@ -55,11 +55,16 @@ Explore the directory [grunt/conf](https://github.com/wilmoore/require-grunt-con
 
 - [load-grunt-tasks][]
 
+## Alternative
+
+- [load-grunt-config][]
+
 ## License
 
   MIT
 
-[load-grunt-tasks]: https://github.com/sindresorhus/load-grunt-tasks
-[before]:           https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.original.js
-[after]:            https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.js
+[load-grunt-tasks]:   https://github.com/sindresorhus/load-grunt-tasks
+[before]:             https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.original.js
+[after]:              https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.js
+[load-grunt-config]:  https://github.com/firstandthird/load-grunt-config
 
