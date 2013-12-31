@@ -8,7 +8,7 @@
 
 ## Wait, What?
 
-Keep your main [Gruntfile clean][after] with configuration extracted into individual files. The name of the file is the same as the task name. For example, the `grunt jshint` configuration would go into `grunt/jshint.js` while the `grunt concat` configuration would go into `grunt/concat.js`.
+Keep your main [Gruntfile clean][after] by extracting configuration into individual files. The name of the file is the same as the task name. For example, the `grunt jshint` configuration would go into `grunt/jshint.js` while the `grunt concat` configuration would go into `grunt/concat.js`.
 
 Check out [these examples][grunt/conf] for a more in-depth look at how this works.
 
