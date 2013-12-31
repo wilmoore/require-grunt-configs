@@ -4,13 +4,13 @@
 [![Build Status](https://david-dm.org/wilmoore/require-grunt-configs.png)](https://david-dm.org/wilmoore/require-grunt-configs)
 [![NPM version](https://badge.fury.io/js/require-grunt-configs.png)](http://badge.fury.io/js/require-grunt-configs)
 
-  Load a directory of grunt configurations. I wrote this because even a trivial grunt configuration can look a bit unweildy lumped into one huge file. Check out the [before][] and [after][] examples to understand the benefit.
+  Load a directory of grunt configurations. I wrote this because even a trivial grunt configuration can look a bit unwieldy as one huge file. Check out the [before][] and [after][] examples to understand the benefit.
 
 ## Wait, What?
 
-Keep your main gruntfile clean with task configurations extracted into individual files named after the task. For example, the `grunt jshint` configuration would go into `grunt/jshint.js` while the `grunt concat` configuration would go into `grunt/concat.js`.
+Keep your main [Gruntfile clean][after] with configuration extracted into individual files. The name of the file is the same as the task name. For example, the `grunt jshint` configuration would go into `grunt/jshint.js` while the `grunt concat` configuration would go into `grunt/concat.js`.
 
-Check out [these examples][grunt/conf] to get a more in-depth look at how this works.
+Check out [these examples][grunt/conf] for a more in-depth look at how this works.
 
 ## Installation
 
@@ -18,7 +18,7 @@ Check out [these examples][grunt/conf] to get a more in-depth look at how this w
 
 ### Configuration
 
-When called, `require-grunt-configs` looks to the `grunt/` directory for configuration files if the second parameter is not specified; however, you may prefer a more organized directory structure such as the one below:
+`require-grunt-configs` when called, looks to the `grunt/` directory for configuration files if the second parameter is not specified; however, you may prefer a more organized directory structure such as the one below:
 
     grunt
     └── conf
@@ -40,7 +40,7 @@ Explore the directory [grunt/conf][] to view the contents of the example configu
 ## Examples
 
 - [Gruntfile][after]
-- [grunt/conf]
+- [grunt/conf][]
 
 ## Inspiration
 
