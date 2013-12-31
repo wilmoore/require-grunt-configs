@@ -39,8 +39,7 @@ Explore the directory [grunt/conf][] to view the contents of the example configu
 
 ## Examples
 
-- [Gruntfile][after]
-- [grunt/conf][]
+- [Examples][examples]
 
 ## Inspiration
 
@@ -58,5 +57,6 @@ Explore the directory [grunt/conf][] to view the contents of the example configu
 [before]:             https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.original.js
 [after]:              https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.js
 [grunt/conf]:         https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf
+[examples]:           https://github.com/wilmoore/require-grunt-configs/tree/master/example
 [load-grunt-config]:  https://github.com/firstandthird/load-grunt-config
 
