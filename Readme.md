@@ -10,9 +10,9 @@
 
 Keep your main gruntfile clean with task configurations extracted into individual files named after the task: 
 
-    `grunt/jshint.js` => `grunt jshint`
-    `grunt/uglify.js` => `grunt uglify`
-    `grunt/concat.js` => `grunt concat`
+    grunt/jshint.js => grunt jshint
+    grunt/uglify.js => grunt uglify
+    grunt/concat.js => grunt concat
 
 Check out the [example](https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf) configuration modules to get a feel for how this works.
 
@@ -41,7 +41,7 @@ Check out the [example](https://github.com/wilmoore/require-grunt-configs/tree/m
 
 ### configuration modules
 
-When called, `require-grunt-configs` looks to the `grunt/` directory for configuration files if the second parameter is not specified; however, you may prefer to better organize your configurations like the example below:
+When called, `require-grunt-configs` looks to the `grunt/` directory for configuration files if the second parameter is not specified; however, you may prefer a more organized directory structure such as the one below:
 
     grunt
     └── conf
@@ -53,9 +53,9 @@ When called, `require-grunt-configs` looks to the `grunt/` directory for configu
         └── uglify.js
         └── watch.js
 
-In order to load the above configuration files, you would call `require-grunt-configs` specifying the second parameter as depicted below:
+In order to load the above configuration files, you would call `require-grunt-configs` specifying the second parameter as depicted in the following code sample:
 
-    # look for configuration modules under the "grunt/conf" directory
+    # look for configuration modules under the "grunt/conf" directory (this goes in your main Gruntfile).
     require('require-grunt-configs')(grunt, 'grunt/conf')
     
 Explore the directory [grunt/conf](https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf) to view the contents of the example configuration files listed above.
