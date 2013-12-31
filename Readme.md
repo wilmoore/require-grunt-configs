@@ -10,32 +10,13 @@
 
 Keep your main gruntfile clean with task configurations extracted into individual files named after the task. For example, the `grunt jshint` configuration would go into `grunt/jshint.js` while the `grunt concat` configuration would go into `grunt/concat.js`.
 
-Check out [these examples](https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf) to get a more in-depth look at how this works.
+Check out [these examples][grunt/conf] to get a more in-depth look at how this works.
 
 ## Installation
 
     % npm install require-grunt-configs --save-dev
 
-### gruntfile.js
-
-    module.exports = function (grunt) {
-
-      // load all configuration files
-      var configuration = require("require-grunt-configs")(grunt, "grunt/conf");
-      grunt.initConfig(configuration);
-
-      // load custom tasks
-      grunt.loadTasks("grunt/task");
-
-      // load installed npm tasks
-      require("load-grunt-tasks")(grunt);
-
-      // Register the default tasks
-      grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'sass', 'notify']);
-
-    };
-
-### configuration modules
+### Configuration
 
 When called, `require-grunt-configs` looks to the `grunt/` directory for configuration files if the second parameter is not specified; however, you may prefer a more organized directory structure such as the one below:
 
@@ -49,12 +30,17 @@ When called, `require-grunt-configs` looks to the `grunt/` directory for configu
         └── uglify.js
         └── watch.js
 
-In order to load the above configuration files, you would call `require-grunt-configs` specifying the second parameter as depicted in the following code sample:
+In order to load the above configuration files, in your [Gruntfile][after] you would call `require-grunt-configs` specifying the second parameter as depicted in the following code sample:
 
     # look for configuration modules under the "grunt/conf" directory (this goes in your main Gruntfile).
     require('require-grunt-configs')(grunt, 'grunt/conf')
     
-Explore the directory [grunt/conf](https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf) to view the contents of the example configuration files listed above.
+Explore the directory [grunt/conf][] to view the contents of the example configuration files listed above.
+
+## Examples
+
+- [Gruntfile][after]
+- [grunt/conf]
 
 ## Inspiration
 
@@ -71,5 +57,6 @@ Explore the directory [grunt/conf](https://github.com/wilmoore/require-grunt-con
 [load-grunt-tasks]:   https://github.com/sindresorhus/load-grunt-tasks
 [before]:             https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.original.js
 [after]:              https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.js
+[grunt/conf]:         https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf
 [load-grunt-config]:  https://github.com/firstandthird/load-grunt-config
 
