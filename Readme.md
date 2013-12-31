@@ -8,13 +8,9 @@
 
 ## Wait, What?
 
-Keep your main gruntfile clean with task configurations extracted into individual files named after the task: 
+Keep your main gruntfile clean with task configurations extracted into individual files named after the task. For example, the `grunt jshint` configuration would go into `grunt/jshint.js` while the `grunt concat` configuration would go into `grunt/concat.js`.
 
-    grunt/jshint.js => grunt jshint
-    grunt/uglify.js => grunt uglify
-    grunt/concat.js => grunt concat
-
-Check out the [example](https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf) configuration modules to get a feel for how this works.
+Check out the [example](https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf) configuration modules to get a more in-depth look at how this works.
 
 ## Installation
 
