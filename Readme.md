@@ -18,7 +18,7 @@ Check out [these examples][grunt/conf] for a more in-depth look at how this work
 
 ### Configuration
 
-`require-grunt-configs` when called, looks to the `grunt/` directory for configuration files if the second parameter is not specified; however, you may prefer a more organized directory structure such as the one below:
+By default, `require-grunt-configs` loads files from the `grunt` directory; however, you may prefer a more organized directory structure (as do I) such as the one below:
 
     grunt
     └── conf
