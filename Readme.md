@@ -4,11 +4,13 @@
 [![Build Status](https://david-dm.org/wilmoore/require-grunt-configs.png)](https://david-dm.org/wilmoore/require-grunt-configs)
 [![NPM version](https://badge.fury.io/js/require-grunt-configs.png)](http://badge.fury.io/js/require-grunt-configs)
 
-  Load a directory of grunt configurations. Very similar to [load-grunt-tasks][] but for configuration. Check out the [before][] and [after][] to understand the benefit.
+  Load a directory of grunt configurations. This is in the spirit of tools like [load-grunt-tasks][] but for configuration. Check out the [before][] and [after][] examples to understand the benefit.
+  
+  I wrote this because even a trivial grunt configuration can look a bit unweildy lumped into one huge file. You'd never write production code this way (right?!). Being able to get a reasonable picture of the build by typing `ls grunt` seems like a step in the right direction.
 
 ## Wait, What?
 
-Keep your main gruntfile clean while task configurations are tucked neatly away into individual files named after the task (i.e. `jshint.js`).
+Keep your main gruntfile clean while task configurations are tucked neatly away into individual files named after the task (i.e. `grunt/jshint.js`, `grunt/uglify.js`, `grunt/concat`).
 
 Check out the [example](https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf) configuration modules to get a feel for how this works.
 
