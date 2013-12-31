@@ -30,9 +30,8 @@ Check out [these examples][grunt/conf] for a more in-depth look at how this work
         └── uglify.js
         └── watch.js
 
-In order to load the above configuration files, in your [Gruntfile][after] you would call `require-grunt-configs` specifying the second parameter as depicted in the following code sample:
+In order to load the above configuration files, in your [Gruntfile][after]:
 
-    # look for configuration modules under the "grunt/conf" directory (this goes in your main Gruntfile).
     require('require-grunt-configs')(grunt, 'grunt/conf')
     
 Explore the directory [grunt/conf][] to view the contents of the example configuration files listed above.
