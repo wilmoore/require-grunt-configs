@@ -39,6 +39,8 @@ Check out the [example](https://github.com/wilmoore/require-grunt-configs/tree/m
 
 ### configuration modules
 
+When called, `require-grunt-configs` looks to the `grunt/` directory for configuration files if the second parameter is not specified; however, you may prefer to better organize your configurations like the example below:
+
     grunt
     └── conf
         ├── concat.js
@@ -49,15 +51,12 @@ Check out the [example](https://github.com/wilmoore/require-grunt-configs/tree/m
         └── uglify.js
         └── watch.js
 
-Explore the directory [grunt/conf](https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf) to view the contents of the above files.
+In order to load the above configuration files, you would call `require-grunt-configs` specifying the second parameter as depicted below:
 
-## Root directory configuration examples
-
-    # your configuration modules go under the "grunt" directory (default)
-    require('require-grunt-configs')(grunt)
-
-    # your configuration modules go under the ".grunt/conf" directory
-    require('require-grunt-configs')(grunt, '.grunt/conf')
+    # look for configuration modules under the "grunt/conf" directory
+    require('require-grunt-configs')(grunt, 'grunt/conf')
+    
+Explore the directory [grunt/conf](https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf) to view the contents of the example configuration files listed above.
 
 ## Inspiration
 
