@@ -6,7 +6,7 @@
 
   Load a directory of grunt configurations. This is in the spirit of tools like [load-grunt-tasks][] but for configuration. Check out the [before][] and [after][] examples to understand the benefit.
   
-  I wrote this because even a trivial grunt configuration can look a bit unweildy lumped into one huge file. You'd never write production code this way (right?!). Being able to get a reasonable picture of the build by typing `ls grunt` seems like a step in the right direction.
+  I wrote this because even a trivial grunt configuration can look a bit unweildy lumped into one huge file.
 
 ## Wait, What?
 
