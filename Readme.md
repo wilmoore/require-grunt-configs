@@ -38,7 +38,7 @@ Explore the directory [grunt/conf][] to view the contents of the example configu
 
 ## Examples
 
-- [Examples][examples]
+- [Go ahead, have a look][examples].
 
 ## Inspiration
 
