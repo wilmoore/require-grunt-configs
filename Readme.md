@@ -4,38 +4,21 @@
 [![Build Status](https://david-dm.org/wilmoore/require-grunt-configs.png)](https://david-dm.org/wilmoore/require-grunt-configs)
 [![NPM version](https://badge.fury.io/js/require-grunt-configs.png)](http://badge.fury.io/js/require-grunt-configs)
 
-  Load a directory of grunt configurations. Very similar to [load-grunt-tasks][] but for configuration. Check out the [before][] and [after][] to understand the benefit.
+  Load a directory of grunt configurations. I wrote this because even a trivial grunt configuration can look a bit unwieldy as one huge file. Check out the [before][] and [after][] examples to understand the benefit.
 
 ## Wait, What?
 
-Keep your main gruntfile clean while task configurations are tucked neatly away into individual files named after the task (i.e. `jshint.js`).
+Keep your main [Gruntfile clean][after] by extracting configuration into individual files. The name of the file is the same as the task name. For example, the `grunt jshint` configuration would go into `grunt/jshint.js` while the `grunt concat` configuration would go into `grunt/concat.js`.
 
-Check out the [example](https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf) configuration modules to get a feel for how this works.
+Check out [these examples][grunt/conf] for a more in-depth look at how this works.
 
 ## Installation
 
     % npm install require-grunt-configs --save-dev
 
-### gruntfile.js
+### Configuration
 
-    module.exports = function (grunt) {
-
-      // load all configuration files
-      var configuration = require("require-grunt-configs")(grunt, "grunt/conf");
-      grunt.initConfig(configuration);
-
-      // load custom tasks
-      grunt.loadTasks("grunt/task");
-
-      // load installed npm tasks
-      require("load-grunt-tasks")(grunt);
-
-      // Register the default tasks
-      grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'sass', 'notify']);
-
-    };
-
-### configuration modules
+By default, `require-grunt-configs` loads files from the `grunt` directory; however, you may prefer a more organized directory structure (as do I) such as the one below:
 
     grunt
     └── conf
@@ -47,15 +30,15 @@ Check out the [example](https://github.com/wilmoore/require-grunt-configs/tree/m
         └── uglify.js
         └── watch.js
 
-Explore the directory [grunt/conf](https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf) to view the contents of the above files.
+In order to load the above configuration files, in your [Gruntfile][after] add:
 
-## Root directory configuration examples
+    require('require-grunt-configs')(grunt, 'grunt/conf')
+    
+Explore the directory [grunt/conf][] to view the contents of the example configuration files listed above.
 
-    # your configuration modules go under the "grunt" directory (default)
-    require('require-grunt-configs')(grunt)
+## Examples
 
-    # your configuration modules go under the ".grunt/conf" directory
-    require('require-grunt-configs')(grunt, '.grunt/conf')
+- [Go ahead, have a look][examples].
 
 ## Inspiration
 
@@ -73,6 +56,8 @@ Explore the directory [grunt/conf](https://github.com/wilmoore/require-grunt-con
 [load-grunt-tasks]:   https://github.com/sindresorhus/load-grunt-tasks
 [before]:             https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.original.js
 [after]:              https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.js
+[grunt/conf]:         https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf
+[examples]:           https://github.com/wilmoore/require-grunt-configs/tree/master/example
 [load-grunt-config]:  https://github.com/firstandthird/load-grunt-config
 [@cowboy]:            https://github.com/cowboy
 [cowboy]:             https://github.com/cowboy/wesbos/blob/master/Gruntfile.js
