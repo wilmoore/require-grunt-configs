@@ -46,8 +46,9 @@ Explore the directory [grunt/conf][] to view the contents of the example configu
 
 ## Alternatives
 
-- [load-grunt-config][]
-- how [@cowboy][] modularizes [Gruntfiles][cowboy]
+- [load-grunt-config][]: _does a lot more than configuration._
+- [grunt-configure][]: _I wasn't comfortable with the LOC and dependency list given the task._
+- how [@cowboy][] modularizes [Gruntfiles][cowboy]: _uses tasks for external config -- I will be exploring this approach for future projects._
 
 ## License
 
@@ -59,6 +60,7 @@ Explore the directory [grunt/conf][] to view the contents of the example configu
 [grunt/conf]:         https://github.com/wilmoore/require-grunt-configs/tree/master/example/grunt/conf
 [examples]:           https://github.com/wilmoore/require-grunt-configs/tree/master/example
 [load-grunt-config]:  https://github.com/firstandthird/load-grunt-config
+[grunt-configure]:    https://npmjs.org/package/grunt-configure
 [@cowboy]:            https://github.com/cowboy
 [cowboy]:             https://github.com/cowboy/wesbos/blob/master/Gruntfile.js
 
