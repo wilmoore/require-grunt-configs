@@ -61,9 +61,10 @@ Explore the directory [grunt/conf](https://github.com/wilmoore/require-grunt-con
 
 - [load-grunt-tasks][]
 
-## Alternative
+## Alternatives
 
 - [load-grunt-config][]
+- how [@cowboy][] modularizes [Gruntfiles][cowboy]
 
 ## License
 
@@ -73,4 +74,6 @@ Explore the directory [grunt/conf](https://github.com/wilmoore/require-grunt-con
 [before]:             https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.original.js
 [after]:              https://github.com/wilmoore/require-grunt-configs/blob/master/example/gruntfile.js
 [load-grunt-config]:  https://github.com/firstandthird/load-grunt-config
+[@cowboy]:            https://github.com/cowboy
+[cowboy]:             https://github.com/cowboy/wesbos/blob/master/Gruntfile.js
 
