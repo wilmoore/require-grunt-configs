@@ -1,7 +1,7 @@
 {
   "name": "require-grunt-configs",
   "description": "Load a directory of grunt configurations. Very similar to load-grunt-tasks but for configuration.",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "homepage": "https://github.com/wilmoore/require-grunt-configs",
   "author": {
     "name": "Wil Moore III",
