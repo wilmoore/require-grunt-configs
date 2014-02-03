@@ -33,7 +33,7 @@ By default, `require-grunt-configs` loads files from the `grunt` directory; howe
 In order to load the above configuration files, in your [Gruntfile][after] add:
 
     require('require-grunt-configs')(grunt, 'grunt/conf')
-    
+
 Explore the directory [grunt/conf][] to view the contents of the example configuration files listed above.
 
 ## Examples
